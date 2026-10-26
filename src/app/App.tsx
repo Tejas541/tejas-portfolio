@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, Download, Github, Linkedin, Mail, Brain, Code, Lightbulb, ExternalLink, Sparkles, Terminal, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import profileImage from '../imports/profile-new.jpg';
+import profileImage from '../imports/profile-new.jpeg';
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/tejas-abhang-e5d41a/";
 const GITHUB_URL = "https://github.com/Tejas541";
