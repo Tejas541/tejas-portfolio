@@ -49,6 +49,7 @@ function Navbar() {
           <a href="#projects" className="text-white/70 hover:text-white transition-colors">Projects</a>
           <a href="#exploring" className="text-white/70 hover:text-white transition-colors">Exploring</a>
           <a href="#experience" className="text-white/70 hover:text-white transition-colors">Experience</a>
+          <a href="#certifications" className="text-white/70 hover:text-white transition-colors">Certifications</a>
           <a href="#contact" className="text-white/70 hover:text-white transition-colors">Contact</a>
           <div className="w-px h-4 bg-white/20 mx-2"></div>
           <a href={LINKEDIN_URL} target="_blank" rel="noreferrer" className="text-white/70 hover:text-white transition-colors inline-flex items-center gap-1">LinkedIn ↗</a>
@@ -84,6 +85,7 @@ function Navbar() {
               <a href="#projects" onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white transition-colors">Projects</a>
               <a href="#exploring" onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white transition-colors">Exploring</a>
               <a href="#experience" onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white transition-colors">Experience</a>
+              <a href="#certifications" onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white transition-colors">Certifications</a>
               <a href="#contact" onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white transition-colors">Contact</a>
 
               <div className="w-full h-px bg-white/10 my-2"></div>
@@ -487,59 +489,102 @@ function ExperienceSection() {
 function CertificationsSection() {
   const certs = [
     {
+      name: "Introduction to Machine Learning Concepts",
+      org: "Microsoft",
+      year: "Issued September 2026",
+      skill: "Machine Learning",
+      url: ""
+    },
+    {
+      name: "Edge AI",
+      org: "Edge Impulse",
+      year: "Issued October 2026",
+      skill: "Edge Computing",
+      url: ""
+    },
+    {
+      name: "AWS Academy Graduate — Cloud Architecting",
+      org: "Amazon Web Services (AWS)",
+      year: "Issued October 2026",
+      skill: "Cloud Architecture",
+      url: ""
+    },
+    {
+      name: "AWS Academy Graduate — Cloud Foundations",
+      org: "Amazon Web Services (AWS)",
+      year: "Issued September 2026",
+      skill: "Amazon Web Services (AWS)",
+      url: ""
+    },
+    {
       name: "Prompt Design in Vertex AI Skill Badge",
       org: "Google",
       year: "Issued August 2026",
+      skill: "Prompt Design",
       url: "https://www.credly.com/badges/a2681c9a-f59a-4590-9686-5303502ba600/linked_in_profile"
     },
     {
       name: "Certificate of Participation in CampusCrew: 100K Special Certificate Distribution of Google Gemini QuizOff 2026",
       org: "Unstop",
       year: "Issued June 2026",
+      skill: "Generative AI",
       url: "https://unstop.com/certificate-preview/2e555dea-2aee-46de-b9df-07eb344cab0c?utm_campaign=site-emails"
     },
     {
       name: "Google Analytics Certification",
       org: "Skillshop",
       year: "Issued April 2026 · Expires April 2027",
+      skill: "Google Analytics",
       url: "https://skillshop.credential.net/9e52ed3e-4be1-49db-b32b-0c090a177821#acc.w4QziVTc"
     },
     {
       name: "Google Ads Search Certification",
       org: "Skillshop",
       year: "Issued August 2026 · Expires April 2027",
+      skill: "Google Ads",
       url: "https://skillshop.credential.net/29953bad-82ca-492a-b38b-c5380ef43362#acc.3SdpmsLR"
     }
   ];
 
   return (
-    <section className="py-16 px-6 md:px-12 relative z-10 bg-white/[0.01]">
+    <section id="certifications" className="py-20 px-6 md:px-12 relative z-10 bg-white/[0.01]">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold mb-8 tracking-tight">Certifications & Learning</h2>
+        <div className="mb-10">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-violet-300/80 mb-3">Proof of learning</p>
+          <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-display)] font-bold mb-4 tracking-tight">Certifications & Learning</h2>
+          <p className="text-white/50 max-w-2xl">Courses and credentials that reflect my ongoing learning across AI, machine learning, cloud computing and analytics.</p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {certs.map((cert, idx) => (
-            <div key={idx} className="bg-white/[0.02] border border-white/10 rounded-xl p-5 flex justify-between items-center hover:bg-white/[0.04] transition-colors">
-              <div>
-                <h3 className="font-bold text-white/90 text-base">{cert.name}</h3>
-                <p className="text-white/50 text-sm mt-1">{cert.org} &middot; {cert.year}</p>
+            <article key={cert.name} className="group bg-white/[0.025] border border-white/10 rounded-2xl p-5 md:p-6 flex flex-col min-h-[190px] hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-11 h-11 shrink-0 rounded-xl bg-gradient-to-br from-violet-500/20 to-blue-500/10 border border-white/10 flex items-center justify-center">
+                  <span className="text-sm font-bold text-white/80">{String(idx + 1).padStart(2, "0")}</span>
+                </div>
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-bold text-white/90 text-base leading-snug">{cert.name}</h3>
+                  <p className="text-white/60 text-sm mt-2">{cert.org}</p>
+                  <p className="text-white/40 text-xs mt-1">{cert.year}</p>
+                  <p className="text-white/50 text-xs mt-3">Skill: {cert.skill}</p>
+                </div>
               </div>
-              <a
-                href={cert.url}
-                target="_blank"
-                rel="noreferrer"
-                className="text-xs font-semibold uppercase tracking-wider text-white/70 hover:text-white inline-flex items-center gap-1"
-              >
-                View ↗
-              </a>
-            </div>
+              <div className="mt-auto pt-5 flex justify-end">
+                {cert.url ? (
+                  <a href={cert.url} target="_blank" rel="noreferrer" className="text-xs font-semibold uppercase tracking-wider text-white/70 hover:text-white inline-flex items-center gap-2">
+                    View credential <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                ) : (
+                  <span className="text-xs text-white/30">Credential link to be added</span>
+                )}
+              </div>
+            </article>
           ))}
         </div>
       </div>
     </section>
   );
 }
-
 function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
