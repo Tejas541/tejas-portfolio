@@ -493,7 +493,7 @@ function CertificationsSection() {
       org: "Microsoft",
       year: "Issued September 2026",
       skill: "Machine Learning",
-      url: ""
+      url: "https://learn.microsoft.com/en-us/users/tejasabhang-2359/achievements/ega4xnup?ref=https%3A%2F%2Fwww.linkedin.com%2F"
     },
     {
       name: "Edge AI",
@@ -507,14 +507,14 @@ function CertificationsSection() {
       org: "Amazon Web Services (AWS)",
       year: "Issued October 2026",
       skill: "Cloud Architecture",
-      url: ""
+      url: "https://www.credly.com/badges/3ec8fdb4-6a96-4de8-9cf2-34520483077d/public_url"
     },
     {
       name: "AWS Academy Graduate — Cloud Foundations",
       org: "Amazon Web Services (AWS)",
       year: "Issued September 2026",
       skill: "Amazon Web Services (AWS)",
-      url: ""
+      url: "https://www.credly.com/badges/47779060-7324-470d-b755-938114b8ab29/public_url"
     },
     {
       name: "Prompt Design in Vertex AI Skill Badge",
