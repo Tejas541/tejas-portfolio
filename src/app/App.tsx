@@ -183,7 +183,7 @@ function HeroSection() {
               <img
                 src={profileImage}
                 alt="Tejas Abhang"
-                className="w-full h-full object-cover rounded-full relative z-10 border border-white/10"
+                className="w-full h-full object-cover object-[45%_center] rounded-full relative z-10 border border-white/10"s
               />
             </div>
 
